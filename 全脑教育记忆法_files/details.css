@@ -1,0 +1,127 @@
+﻿@charset 'utf-8';
+.wrapper-fixed {
+    position: relative;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.BgCLev2 {
+    background-color: #2177B3;
+}
+.sub-header {
+    background: linear-gradient(to bottom, #FFFFFF, #EAEAEA) repeat scroll 0 0 #FFFFFF;
+}
+.sub-header, .tit-popup {
+    color: #383838;
+}
+.sub-header {
+    border-color: #BFBFBF;
+}
+.sub-header {
+    border-color: #BABABA;
+}
+.sub-header {
+    border-bottom: 1px solid #BFBFBF;
+    box-shadow: 0 -1px 0 #E5E5E5 inset, 0 1px 1px #DDDDDD;
+    position: relative;
+    z-index: 2;
+}
+.sub-header {
+    border-bottom: 1px solid #BABABA;
+    box-shadow: 0 -1px 0 #F4F4F4 inset, 0 1px 2px #C3C3C3;
+    height: 43px;
+    padding: 0 8px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.list-info-page {
+    background-color: #FFFFFF;
+}
+.list-info-page {
+    border-radius: 3px;
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);*/
+    font-size: 0.875rem;
+    margin: 0px 0px 15px 0px;
+}
+
+
+.item-info-page:last-child {
+    border: 0 none;
+}
+.item-info-page {
+    border-color: #E3E3E3;
+}
+.item-info-page {
+    border-bottom: 0px solid #DADADA;
+    overflow: hidden;
+    padding: 9px 5px 9px 0;
+}
+
+
+.item-info-page .blue-v {
+    background: none repeat scroll 0 0 #C2DFFB;
+    border-color: #5CB0F1;
+    color: #004ADD;
+}
+.item-info-page .member, .item-info-page .blue-v, .item-info-page .yellow-v {
+    background: none repeat scroll 0 0 #FF5220;
+    border: 1px solid #C54F00;
+    border-radius: 5px;
+    color: #FFFF88;
+    margin: 0 0 0 5px;
+    text-align: center;
+    width: 70px;
+}
+.tit-info-page, .item-info-page span {
+    color: #333333;
+}
+.item-info-page > span, .item-info-page a > span {
+    float: left;
+    font-weight: 700;
+    margin: 0 0 0 0px;
+    width: 75px;
+}
+
+
+.item-info-page > p, .item-info-page > div, .item-info-page a > p, .item-info-page a > div {
+    margin: 0 0 0 90px;
+}
+
+
+.tit-info-page, .item-info-page span {
+    color: #333333;
+}
+.tit-info-page {
+    font-size: 1.2rem;
+    margin: 10px 10px -8px;
+}
+
+.GridViewPadding td 
+{
+    vertical-align:top;
+    padding-bottom:10px;
+}
+.GridViewPadding td a
+{
+    display:block;
+    overflow:hidden;
+	padding-bottom:0px;
+	height:100%;
+}
+
+
+.tag {
+	display:inline-block;
+	border:1px solid;
+	text-align:center;
+	padding:0 3px;
+	line-height:16px;
+	margin-right:3px;
+    margin-bottom:3px;
+}
