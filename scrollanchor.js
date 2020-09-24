@@ -1,10 +1,8 @@
-var $ = document.querySelectorAll.bind(document);
-
 function navMapScroll (active, dataArt) {
     var pageEqClass = {}
     var navEqClass = {}
     var pageList = []
-    var navElems = $(this).find('[' + dataArt + ']')
+    var navElems = this.querySelectorAll('[' + dataArt + ']')
     var thrFn = function (fn, time, maxLog) {
         var timeK = null
         var oTime = new Date().getTime()
@@ -26,27 +24,30 @@ function navMapScroll (active, dataArt) {
         let scrollTop = window.pageYOffset || window.document.documentElement.scrollTop
         for (var k in pageEqClass) {
             var elem = pageEqClass[k]
-            var offsetTop = elem.offset().top
-            var elemH = elem.outerHeight()
+            var offsetTop = elem.offsetTop
+            var elemH = elem.offsetHeight
             if (offsetTop - scrollTop <= 0 && offsetTop + elemH - scrollTop > 0) {
-                navEqClass[k].addClass(active)
+                navEqClass[k].classList.add(active)
             } else {
-                navEqClass[k].removeClass(active)
+                navEqClass[k].classList.remove(active);
             }
         }
     }, 50, 200)
-    navElems.each(function () {
-        const $elem = $(this)
-        const className = $elem.attr(dataArt)
-        const elem = $('#' + className)
+    navElems.forEach(($elem) => {
+        const className = $elem.getAttribute(dataArt)
+        const elem = document.getElementById(className)
         pageList.push(elem)
         pageEqClass[className] = elem
         navEqClass[className] = $elem
     })
-    $(window).on('scroll', fn)
-    navElems.on('click', function () {
-        var className = $(this).attr(dataArt)
-        $(window).scrollTop(pageEqClass[className].offset().top)
+
+    window.addEventListener('scroll', fn)
+
+    navElems.forEach(($elem) => {
+        $elem.onclick = function () {
+            var className = this.getAttribute(dataArt)
+            window.scrollTo(0, pageEqClass[className].offsetTop)
+        }
     })
     fn()
 }
